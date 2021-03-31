@@ -3,7 +3,7 @@ description: 'Get started with Container actions'
 author: 'Makuza Mugabo Verite'
 inputs:
   myInput:
-    description: 'Input to use'
+    description: 'Input to use in github action'
     default: 'world'
 runs:
   using: 'docker'
