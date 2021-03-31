@@ -1,0 +1,1 @@
+# go-gh-action-template
