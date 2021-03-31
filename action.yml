@@ -1,9 +1,12 @@
-name: My Action
+name: 'Github Action Template'
+description: 'Get started with Container actions'
+author: 'Makuza Mugabo Verite'
 inputs:
-  secrets:
-    fruit: Name of fruit to mask
-    required: true
-
+  myInput:
+    description: 'Input to use'
+    default: 'world'
 runs:
-  using: docker
-  image: Dockerfile
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.myInput }}
