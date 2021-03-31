@@ -1,1 +1,1 @@
-# go-gh-action-template
+#### Starter for writing github actions with golang
