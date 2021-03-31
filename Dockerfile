@@ -1,15 +1,10 @@
-# Specify the version of Go to use
-FROM golang:1.16
+FROM golang:latest
 
-# Copy all the files from the host into the container
-WORKDIR /src
+WORKDIR /src/app
 COPY . .
 
-# Enable Go modules
-ENV GO111MODULE=on
 
-# Compile the action
-RUN go build -o /bin/action
+RUN go get -v ./...
+RUN go build -o main
 
-# Specify the container's entrypoint as the action
-ENTRYPOINT ["/bin/action"]
+ENTRYPOINT ["/go/src/app/main"]
